@@ -3926,6 +3926,24 @@ class BrowserSession(BaseModel):
 					is_visible = await self._is_visible(element_handle)
 					if is_visible:
 						await element_handle.scroll_into_view_if_needed(timeout=1_000)
+					
+						element_data = {
+							"url": page.url,
+							"tag": element.tag_name,
+							"selector_used": css_selector or f'xpath={element.xpath}',
+							"xpath": element.xpath,
+							"attributes": element.attributes,
+						}
+						log_path = Path("demo/selected_elements.json")
+						log_path.parent.mkdir(parents=True, exist_ok=True)
+						existing = []
+						if log_path.exists():
+							with open(log_path, "r") as f:
+								existing = json.load(f)
+						existing.append(element_data)
+						with open(log_path, "w") as f:
+							json.dump(existing, f, indent=2)
+										
 					return element_handle
 				return None
 		except Exception as e:
