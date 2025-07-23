@@ -9,6 +9,7 @@ import re
 import shutil
 import tempfile
 import time
+import uuid
 from dataclasses import dataclass
 from functools import wraps
 from pathlib import Path
@@ -210,6 +211,7 @@ class BrowserSession(BaseModel):
 	Chromium flags should be passed via extra_launch_args.
 	Extra Playwright launch options (e.g., handle_sigterm, handle_sigint) can be passed as kwargs to BrowserSession and will be forwarded to the launch() call.
 	"""
+	session_run_id: str = str(uuid.uuid4().hex)
 
 	model_config = ConfigDict(
 		extra='allow',
@@ -3934,7 +3936,7 @@ class BrowserSession(BaseModel):
 							"xpath": element.xpath,
 							"attributes": element.attributes,
 						}
-						log_path = Path("demo/selected_elements.json")
+						log_path = Path(f"demo/{self.session_run_id}.json")
 						log_path.parent.mkdir(parents=True, exist_ok=True)
 						existing = []
 						if log_path.exists():
