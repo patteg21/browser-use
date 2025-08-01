@@ -4,8 +4,8 @@ import base64
 import pytest
 from pytest_httpserver import HTTPServer
 
-from browser_use.browser import BrowserProfile, BrowserSession
-from browser_use.dom.views import DOMElementNode
+from browser_user.browser import BrowserProfile, BrowserSession
+from browser_user.dom.views import DOMElementNode
 
 
 class TestBrowserContext:
@@ -330,8 +330,8 @@ class TestBrowserContext:
 	@pytest.mark.asyncio
 	async def test_custom_action_with_no_arguments(self, browser_session, base_url):
 		"""Test that custom actions with no arguments are handled correctly"""
-		from browser_use.agent.views import ActionResult
-		from browser_use.controller.registry.service import Registry
+		from browser_user.agent.views import ActionResult
+		from browser_user.controller.registry.service import Registry
 
 		# Create a registry
 		registry = Registry()

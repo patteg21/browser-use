@@ -5,8 +5,8 @@ import time
 
 import pytest
 
-from browser_use.browser import BrowserSession
-from browser_use.browser.profile import BrowserProfile
+from browser_user.browser import BrowserSession
+from browser_user.browser.profile import BrowserProfile
 
 
 @pytest.fixture(scope='function')

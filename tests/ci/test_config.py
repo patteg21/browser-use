@@ -2,7 +2,7 @@
 
 import os
 
-from browser_use.config import CONFIG
+from browser_user.config import CONFIG
 
 
 class TestLazyConfig:

@@ -1,4 +1,4 @@
-from browser_use import BrowserProfile, BrowserSession
+from browser_user import BrowserProfile, BrowserSession
 
 
 async def test_input_text_fallback_for_non_standard_elements(httpserver):

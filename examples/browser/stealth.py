@@ -13,10 +13,10 @@ load_dotenv()
 
 from imgcat import imgcat
 
-from browser_use.browser import BrowserSession
-from browser_use.browser.profile import BrowserProfile
-from browser_use.browser.types import async_patchright
-from browser_use.llm import ChatOpenAI
+from browser_user.browser import BrowserSession
+from browser_user.browser.profile import BrowserProfile
+from browser_user.browser.types import async_patchright
+from browser_user.llm import ChatOpenAI
 
 llm = ChatOpenAI(model='gpt-4.1')
 

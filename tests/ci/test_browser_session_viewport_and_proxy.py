@@ -1,5 +1,5 @@
-from browser_use.browser import BrowserSession
-from browser_use.browser.profile import BrowserProfile, ProxySettings
+from browser_user.browser import BrowserSession
+from browser_user.browser.profile import BrowserProfile, ProxySettings
 
 
 async def test_proxy_settings_pydantic_model():

@@ -9,9 +9,9 @@ import pytest
 from bubus import BaseEvent
 from pytest_httpserver import HTTPServer
 
-from browser_use.agent.cloud_events import CreateAgentTaskEvent
-from browser_use.sync.auth import TEMP_USER_ID, DeviceAuthClient
-from browser_use.sync.service import CloudSync
+from browser_user.agent.cloud_events import CreateAgentTaskEvent
+from browser_user.sync.auth import TEMP_USER_ID, DeviceAuthClient
+from browser_user.sync.service import CloudSync
 
 
 @pytest.fixture

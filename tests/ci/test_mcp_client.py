@@ -13,8 +13,8 @@ from mcp.server import NotificationOptions, Server
 from mcp.server.models import InitializationOptions
 from pytest_httpserver import HTTPServer
 
-from browser_use import ActionResult, Agent, BrowserProfile, BrowserSession, Controller
-from browser_use.mcp.client import MCPClient
+from browser_user import ActionResult, Agent, BrowserProfile, BrowserSession, Controller
+from browser_user.mcp.client import MCPClient
 
 
 class MockMCPServer:

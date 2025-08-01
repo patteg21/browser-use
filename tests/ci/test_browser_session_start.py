@@ -17,13 +17,13 @@ from pathlib import Path
 
 import pytest
 
-from browser_use.browser.profile import (
+from browser_user.browser.profile import (
 	BROWSERUSE_DEFAULT_CHANNEL,
 	BrowserChannel,
 	BrowserProfile,
 )
-from browser_use.browser.session import BrowserSession
-from browser_use.config import CONFIG
+from browser_user.browser.session import BrowserSession
+from browser_user.config import CONFIG
 
 # Set up test logging
 logger = logging.getLogger('browser_session_start_tests')
@@ -559,8 +559,8 @@ class TestBrowserSessionReusePatterns:
 
 	async def test_sequential_agents_same_profile_different_browser(self, mock_llm):
 		"""Test Sequential Agents, Same Profile, Different Browser pattern"""
-		from browser_use import Agent
-		from browser_use.browser.profile import BrowserProfile
+		from browser_user import Agent
+		from browser_user.browser.profile import BrowserProfile
 
 		# Create a reusable profile
 		reused_profile = BrowserProfile(
@@ -597,7 +597,7 @@ class TestBrowserSessionReusePatterns:
 
 	async def test_sequential_agents_same_profile_same_browser(self, mock_llm):
 		"""Test Sequential Agents, Same Profile, Same Browser pattern"""
-		from browser_use import Agent, BrowserSession
+		from browser_user import Agent, BrowserSession
 
 		# Create a reusable session with keep_alive
 		reused_session = BrowserSession(
@@ -831,8 +831,8 @@ class TestBrowserSessionReusePatterns:
 	async def test_parallel_agents_same_profile_different_browsers(self, mock_llm):
 		"""Test Parallel Agents, Same Profile, Different Browsers pattern (recommended)"""
 
-		from browser_use import Agent
-		from browser_use.browser import BrowserProfile, BrowserSession
+		from browser_user import Agent
+		from browser_user.browser import BrowserProfile, BrowserSession
 
 		# Create a shared profile with storage state
 		with tempfile.NamedTemporaryFile(suffix='.json', delete=False, mode='w') as f:
@@ -892,7 +892,7 @@ class TestBrowserSessionReusePatterns:
 
 	async def test_browser_shutdown_isolated(self):
 		"""Test that browser shutdown doesnt affect other browser_sessions"""
-		from browser_use import BrowserSession
+		from browser_user import BrowserSession
 
 		browser_session1 = BrowserSession(
 			browser_profile=BrowserProfile(
@@ -930,7 +930,7 @@ class TestBrowserSessionReusePatterns:
 
 	async def test_many_parallel_browser_sessions(self):
 		"""Test spawning 20 parallel browser_sessions with different settings and ensure they all work"""
-		from browser_use import BrowserSession
+		from browser_user import BrowserSession
 
 		browser_sessions = []
 

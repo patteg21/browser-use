@@ -10,11 +10,11 @@ load_dotenv()
 
 from amazoncaptcha import AmazonCaptcha  # type: ignore
 
-from browser_use import ActionResult
-from browser_use.agent.service import Agent
-from browser_use.browser import BrowserConfig, BrowserSession
-from browser_use.controller.service import Controller
-from browser_use.llm import ChatOpenAI
+from browser_user import ActionResult
+from browser_user.agent.service import Agent
+from browser_user.browser import BrowserConfig, BrowserSession
+from browser_user.controller.service import Controller
+from browser_user.llm import ChatOpenAI
 
 browser_profile = BrowserConfig(headless=False)
 

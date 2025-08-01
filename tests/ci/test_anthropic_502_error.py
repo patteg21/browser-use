@@ -3,9 +3,9 @@
 import pytest
 from anthropic import APIStatusError
 
-from browser_use.llm.anthropic.chat import ChatAnthropic
-from browser_use.llm.exceptions import ModelProviderError
-from browser_use.llm.messages import BaseMessage, UserMessage
+from browser_user.llm.anthropic.chat import ChatAnthropic
+from browser_user.llm.exceptions import ModelProviderError
+from browser_user.llm.messages import BaseMessage, UserMessage
 
 
 @pytest.mark.asyncio

@@ -6,10 +6,10 @@ import io
 import pytest
 from PIL import Image
 
-from browser_use import AgentHistoryList
-from browser_use.agent.gif import create_history_gif
-from browser_use.agent.views import ActionResult, AgentHistory, AgentOutput
-from browser_use.browser.views import PLACEHOLDER_4PX_SCREENSHOT, BrowserStateHistory, TabInfo
+from browser_user import AgentHistoryList
+from browser_user.agent.gif import create_history_gif
+from browser_user.agent.views import ActionResult, AgentHistory, AgentOutput
+from browser_user.browser.views import PLACEHOLDER_4PX_SCREENSHOT, BrowserStateHistory, TabInfo
 
 
 @pytest.fixture

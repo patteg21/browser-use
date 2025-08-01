@@ -4,14 +4,14 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from browser_use.config import CONFIG
-from browser_use.telemetry import (
+from browser_user.config import CONFIG
+from browser_user.telemetry import (
 	CLITelemetryEvent,
 	MCPClientTelemetryEvent,
 	MCPServerTelemetryEvent,
 	ProductTelemetry,
 )
-from browser_use.utils import get_browser_use_version
+from browser_user.utils import get_browser_use_version
 
 
 @pytest.fixture
@@ -20,7 +20,7 @@ def reset_telemetry_singleton():
 	# The singleton decorator stores instance in a list at index 0
 	# We need to access the closure variable which stores the singleton instance
 	# Import the actual module to access the wrapped function
-	from browser_use.telemetry import service
+	from browser_user.telemetry import service
 
 	# Get the ProductTelemetry wrapper function created by @singleton
 	wrapper_func = service.ProductTelemetry
@@ -267,7 +267,7 @@ def test_telemetry_device_id_uses_config_dir():
 	# for the device_id file location instead of the cache directory.
 
 	# Import ProductTelemetry to check the path
-	from browser_use.telemetry.service import ProductTelemetry
+	from browser_user.telemetry.service import ProductTelemetry
 
 	# Create telemetry instance
 	telemetry = ProductTelemetry()

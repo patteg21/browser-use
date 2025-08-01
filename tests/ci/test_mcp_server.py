@@ -18,7 +18,7 @@ import json
 import pytest
 from pytest_httpserver import HTTPServer
 
-from browser_use.mcp.server import BrowserUseServer
+from browser_user.mcp.server import BrowserUseServer
 
 
 class TestMCPServerNavigation:

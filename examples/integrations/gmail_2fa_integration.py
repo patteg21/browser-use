@@ -28,10 +28,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 
 load_dotenv()
 
-from browser_use import Agent, Controller
-from browser_use.config import CONFIG
-from browser_use.integrations.gmail import GmailService, register_gmail_actions
-from browser_use.llm import ChatOpenAI
+from browser_user import Agent, Controller
+from browser_user.config import CONFIG
+from browser_user.integrations.gmail import GmailService, register_gmail_actions
+from browser_user.llm import ChatOpenAI
 
 
 class GmailGrantManager:

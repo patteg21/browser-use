@@ -16,9 +16,9 @@ import logging
 import multiprocessing
 from concurrent.futures import ThreadPoolExecutor
 
-from browser_use import Agent, setup_logging
-from browser_use.browser import BrowserProfile, BrowserSession
-from browser_use.browser.types import async_playwright
+from browser_user import Agent, setup_logging
+from browser_user.browser import BrowserProfile, BrowserSession
+from browser_user.browser.types import async_playwright
 from tests.ci.conftest import create_mock_llm
 
 # Set up test logging
@@ -30,7 +30,7 @@ def run_agent_in_subprocess_module(task_description):
 	"""Module-level function to run an agent in a subprocess"""
 	import asyncio
 
-	from browser_use import Agent
+	from browser_user import Agent
 
 	# Create new event loop for this process
 	loop = asyncio.new_event_loop()

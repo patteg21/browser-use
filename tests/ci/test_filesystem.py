@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from browser_use.filesystem.file_system import (
+from browser_user.filesystem.file_system import (
 	DEFAULT_FILE_SYSTEM_PATH,
 	INVALID_FILENAME_ERROR_MESSAGE,
 	CsvFile,

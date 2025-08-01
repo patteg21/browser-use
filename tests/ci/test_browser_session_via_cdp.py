@@ -1,8 +1,8 @@
 import pytest
 
-from browser_use.browser import BrowserSession
-from browser_use.browser.profile import BrowserProfile
-from browser_use.browser.types import async_playwright
+from browser_user.browser import BrowserSession
+from browser_user.browser.profile import BrowserProfile
+from browser_user.browser.types import async_playwright
 
 
 async def test_connection_via_cdp():

@@ -1,11 +1,11 @@
 import pytest
 from pytest_httpserver import HTTPServer
 
-from browser_use.agent.views import ActionModel, ActionResult
-from browser_use.browser import BrowserSession
-from browser_use.browser.profile import BrowserProfile
-from browser_use.controller.service import Controller
-from browser_use.controller.views import GoToUrlAction
+from browser_user.agent.views import ActionModel, ActionResult
+from browser_user.browser import BrowserSession
+from browser_user.browser.profile import BrowserProfile
+from browser_user.controller.service import Controller
+from browser_user.controller.views import GoToUrlAction
 
 
 @pytest.fixture(scope='session')

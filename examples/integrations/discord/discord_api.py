@@ -10,9 +10,9 @@ load_dotenv()
 import discord  # type: ignore
 from discord.ext import commands  # type: ignore
 
-from browser_use.agent.service import Agent
-from browser_use.browser import BrowserProfile, BrowserSession
-from browser_use.llm import BaseChatModel
+from browser_user.agent.service import Agent
+from browser_user.browser import BrowserProfile, BrowserSession
+from browser_user.llm import BaseChatModel
 
 
 class DiscordBot(commands.Bot):

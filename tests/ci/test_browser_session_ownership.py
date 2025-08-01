@@ -5,7 +5,7 @@ Test browser resource ownership when BrowserSession is copied.
 import asyncio
 import gc
 
-from browser_use import Agent, BrowserProfile, BrowserSession
+from browser_user import Agent, BrowserProfile, BrowserSession
 from tests.ci.conftest import create_mock_llm
 
 

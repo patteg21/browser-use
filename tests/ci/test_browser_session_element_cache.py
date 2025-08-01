@@ -5,9 +5,9 @@ Test each assumption step by step to isolate the problem.
 
 import pytest
 
-from browser_use.browser import BrowserSession
-from browser_use.browser.profile import BrowserProfile
-from browser_use.controller.service import Controller
+from browser_user.browser import BrowserSession
+from browser_user.browser.profile import BrowserProfile
+from browser_user.controller.service import Controller
 
 
 @pytest.fixture
@@ -140,7 +140,7 @@ async def test_assumption_3_action_gets_same_selector_map(browser_session, contr
 	# Create a test action that checks the selector map it receives
 	@controller.registry.action('Test: Check selector map')
 	async def test_check_selector_map(browser_session: BrowserSession):
-		from browser_use import ActionResult
+		from browser_user import ActionResult
 
 		action_selector_map = await browser_session.get_selector_map()
 		return ActionResult(
@@ -176,7 +176,7 @@ async def test_assumption_4_click_action_specific_issue(browser_session, control
 	# Create a test action that replicates click_element_by_index logic
 	@controller.registry.action('Test: Debug click logic')
 	async def test_debug_click_logic(index: int, browser_session: BrowserSession):
-		from browser_use import ActionResult
+		from browser_user import ActionResult
 
 		# This is the exact logic from click_element_by_index
 		selector_map = await browser_session.get_selector_map()
@@ -290,7 +290,7 @@ async def test_assumption_8_same_browser_session_instance(browser_session, contr
 	# Create action that checks browser session identity
 	@controller.registry.action('Test: Check browser session identity')
 	async def test_check_session_identity(browser_session: BrowserSession):
-		from browser_use import ActionResult
+		from browser_user import ActionResult
 
 		action_session_id = id(browser_session)
 		cache_exists = browser_session._cached_browser_state_summary is not None
@@ -331,7 +331,7 @@ async def test_assumption_9_pydantic_private_attrs(browser_session, controller, 
 	print(f'2. Original browser_session ID: {id(browser_session)}')
 
 	# Import the SpecialActionParameters to test directly
-	from browser_use.controller.registry.views import SpecialActionParameters
+	from browser_user.controller.registry.views import SpecialActionParameters
 
 	# Test what happens when we put browser_session through model_validate
 	special_params_data = {
@@ -400,7 +400,7 @@ async def test_assumption_7_cache_gets_cleared(browser_session, controller, http
 	# Create action that checks cache state (NO page parameter)
 	@controller.registry.action('Test: Check cache state no page')
 	async def test_check_cache_state_no_page(browser_session: BrowserSession):
-		from browser_use import ActionResult
+		from browser_user import ActionResult
 
 		cache_exists = browser_session._cached_browser_state_summary is not None
 		if cache_exists and browser_session._cached_browser_state_summary:
@@ -414,7 +414,7 @@ async def test_assumption_7_cache_gets_cleared(browser_session, controller, http
 	# Create action that checks cache state (WITH page parameter)
 	@controller.registry.action('Test: Check cache state with page')
 	async def test_check_cache_state_with_page(browser_session: BrowserSession, page):
-		from browser_use import ActionResult
+		from browser_user import ActionResult
 
 		cache_exists = browser_session._cached_browser_state_summary is not None
 		if cache_exists and browser_session._cached_browser_state_summary:

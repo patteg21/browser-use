@@ -2,9 +2,9 @@
 
 import pytest
 
-from browser_use.browser.profile import BrowserProfile
-from browser_use.browser.session import BrowserSession
-from browser_use.dom.service import DomService
+from browser_user.browser.profile import BrowserProfile
+from browser_user.browser.session import BrowserSession
+from browser_user.dom.service import DomService
 
 
 class TestDomServiceChromeURLs:

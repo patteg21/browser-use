@@ -10,8 +10,8 @@ import os
 from dotenv import load_dotenv
 from lmnr import Laminar
 
-from browser_use import Agent
-from browser_use.llm import ChatOpenAI
+from browser_user import Agent
+from browser_user.llm import ChatOpenAI
 
 load_dotenv()
 

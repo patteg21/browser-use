@@ -20,8 +20,8 @@ from playwright.async_api import async_playwright
 from pytest_httpserver import HTTPServer
 from werkzeug.wrappers import Response
 
-from browser_use.browser.profile import BrowserProfile
-from browser_use.browser.session import BrowserSession
+from browser_user.browser.profile import BrowserProfile
+from browser_user.browser.session import BrowserSession
 
 # Suppress TargetClosedError warnings during tests
 warnings.filterwarnings('ignore', category=RuntimeWarning, message='.*TargetClosedError.*')

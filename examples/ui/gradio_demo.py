@@ -17,8 +17,8 @@ from rich.panel import Panel
 from rich.text import Text
 
 # Local module imports
-from browser_use import Agent
-from browser_use.llm import ChatOpenAI
+from browser_user import Agent
+from browser_user.llm import ChatOpenAI
 
 
 @dataclass

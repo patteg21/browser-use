@@ -1,8 +1,8 @@
 import asyncio
 import os
 
-from browser_use import Agent
-from browser_use.llm import ChatDeepSeek
+from browser_user import Agent
+from browser_user.llm import ChatDeepSeek
 
 # Add your custom instructions
 extend_system_message = """

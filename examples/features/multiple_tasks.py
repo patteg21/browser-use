@@ -9,10 +9,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-from browser_use import Agent
-from browser_use.browser import BrowserSession
-from browser_use.browser.types import async_playwright
-from browser_use.llm import ChatGoogle
+from browser_user import Agent
+from browser_user.browser import BrowserSession
+from browser_user.browser.types import async_playwright
+from browser_user.llm import ChatGoogle
 
 api_key = os.getenv('GOOGLE_API_KEY')
 

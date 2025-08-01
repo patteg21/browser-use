@@ -1,4 +1,4 @@
-from browser_use.browser import BrowserProfile, BrowserSession
+from browser_user.browser import BrowserProfile, BrowserSession
 
 
 class TestUrlAllowlistSecurity:

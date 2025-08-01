@@ -16,8 +16,8 @@ import asyncio
 
 from lmnr import Laminar
 
-from browser_use import Agent
-from browser_use.llm import ChatAnthropicBedrock, ChatAWSBedrock
+from browser_user import Agent
+from browser_user.llm import ChatAnthropicBedrock, ChatAWSBedrock
 
 Laminar.initialize()
 

@@ -6,9 +6,9 @@ import asyncio
 
 from dotenv import load_dotenv
 
-from browser_use import Agent, Controller
-from browser_use.browser import BrowserProfile, BrowserSession
-from browser_use.llm import ChatOpenAI
+from browser_user import Agent, Controller
+from browser_user.browser import BrowserProfile, BrowserSession
+from browser_user.llm import ChatOpenAI
 
 # Load environment variables
 load_dotenv()

@@ -18,19 +18,19 @@ from pydantic import Field
 from pytest_httpserver import HTTPServer
 from pytest_httpserver.httpserver import HandlerType
 
-from browser_use.agent.views import ActionResult
-from browser_use.browser import BrowserSession
-from browser_use.browser.profile import BrowserProfile
-from browser_use.browser.types import Page
-from browser_use.controller.registry.service import Registry
-from browser_use.controller.registry.views import ActionModel as BaseActionModel
-from browser_use.controller.views import (
+from browser_user.agent.views import ActionResult
+from browser_user.browser import BrowserSession
+from browser_user.browser.profile import BrowserProfile
+from browser_user.browser.types import Page
+from browser_user.controller.registry.service import Registry
+from browser_user.controller.registry.views import ActionModel as BaseActionModel
+from browser_user.controller.views import (
 	ClickElementAction,
 	InputTextAction,
 	NoParamsAction,
 	SearchGoogleAction,
 )
-from browser_use.llm.messages import UserMessage
+from browser_user.llm.messages import UserMessage
 from tests.ci.conftest import create_mock_llm
 
 # Configure logging
@@ -211,7 +211,7 @@ class TestActionRegistryParameterPatterns:
 	async def test_mixed_special_parameters(self, registry, browser_session, base_url, mock_llm):
 		"""Test action with multiple special injected parameters"""
 
-		from browser_use.llm.base import BaseChatModel
+		from browser_user.llm.base import BaseChatModel
 
 		@registry.action('Action with multiple special params')
 		async def multi_special_action(
@@ -494,7 +494,7 @@ class TestRegistryEdgeCases:
 	async def test_missing_required_llm(self, registry, browser_session):
 		"""Test that actions requiring page_extraction_llm fail appropriately when not provided"""
 
-		from browser_use.llm.base import BaseChatModel
+		from browser_user.llm.base import BaseChatModel
 
 		@registry.action('Requires LLM')
 		async def requires_llm(text: str, browser_session: BrowserSession, page_extraction_llm: BaseChatModel):
@@ -678,7 +678,7 @@ class TestType1Pattern:
 			goal: str
 			include_links: bool = False
 
-		from browser_use.llm.base import BaseChatModel
+		from browser_user.llm.base import BaseChatModel
 
 		@registry.action('Extract content', param_model=ExtractAction)
 		async def extract_content(
@@ -967,7 +967,7 @@ class TestParameterOrdering:
 	def test_mixed_param_ordering(self):
 		"""Should handle any ordering of action params and special params"""
 		registry = Registry()
-		from browser_use.llm.base import BaseChatModel
+		from browser_user.llm.base import BaseChatModel
 
 		# Special params mixed throughout
 		@registry.action('Mixed params')
@@ -1069,8 +1069,8 @@ class TestParamsModelArgsAndKwargs:
 		This test confirms that this approach works.
 		"""
 
-		from browser_use.controller.registry.service import Registry
-		from browser_use.controller.registry.views import ActionModel
+		from browser_user.controller.registry.service import Registry
+		from browser_user.controller.registry.views import ActionModel
 
 		# Simple context for testing
 		class TestContext:

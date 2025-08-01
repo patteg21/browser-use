@@ -18,9 +18,9 @@ load_dotenv()
 import httpx
 from pydantic import BaseModel
 
-from browser_use import Agent, Controller
-from browser_use.agent.views import ActionResult
-from browser_use.llm import ChatOpenAI
+from browser_user import Agent, Controller
+from browser_user.agent.views import ActionResult
+from browser_user.llm import ChatOpenAI
 
 
 class Profile(BaseModel):

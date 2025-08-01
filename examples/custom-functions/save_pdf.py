@@ -10,9 +10,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from browser_use import ActionResult, Agent, Controller
-from browser_use.browser.types import Page
-from browser_use.llm import ChatOpenAI
+from browser_user import ActionResult, Agent, Controller
+from browser_user.browser.types import Page
+from browser_user.llm import ChatOpenAI
 
 # Initialize controller
 controller = Controller()

@@ -16,8 +16,8 @@ load_dotenv()
 
 from bubus import BaseEvent
 
-from browser_use import Agent
-from browser_use.agent.cloud_events import (
+from browser_user import Agent
+from browser_user.agent.cloud_events import (
 	MAX_TASK_LENGTH,
 	CreateAgentOutputFileEvent,
 	CreateAgentSessionEvent,
@@ -326,7 +326,7 @@ class TestAgentCloudIntegration:
 		)
 
 		# Import CloudSync to create instances
-		from browser_use.sync.service import CloudSync
+		from browser_user.sync.service import CloudSync
 
 		# Create first CloudSync instance
 		cloud_sync1 = CloudSync(

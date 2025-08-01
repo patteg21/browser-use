@@ -7,10 +7,10 @@ from pytest_httpserver import HTTPServer
 
 load_dotenv()
 
-from browser_use.agent.views import ActionModel
-from browser_use.browser.profile import BrowserProfile
-from browser_use.browser.session import BrowserSession
-from browser_use.controller.service import Controller
+from browser_user.agent.views import ActionModel
+from browser_user.browser.profile import BrowserProfile
+from browser_user.browser.session import BrowserSession
+from browser_user.controller.service import Controller
 
 # Set up test logging
 logger = logging.getLogger('tab_tests')

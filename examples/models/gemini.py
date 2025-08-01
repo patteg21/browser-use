@@ -12,9 +12,9 @@ load_dotenv()
 Laminar.initialize()
 
 
-from browser_use import Agent
-from browser_use.browser import BrowserProfile, BrowserSession
-from browser_use.llm import ChatGoogle
+from browser_user import Agent
+from browser_user.browser import BrowserProfile, BrowserSession
+from browser_user.llm import ChatGoogle
 
 api_key = os.getenv('GOOGLE_API_KEY')
 if not api_key:

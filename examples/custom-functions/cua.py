@@ -24,10 +24,10 @@ load_dotenv()
 from openai import AsyncOpenAI
 from pydantic import BaseModel, Field
 
-from browser_use import Agent, Controller
-from browser_use.agent.views import ActionResult
-from browser_use.browser import BrowserSession
-from browser_use.llm import ChatOpenAI
+from browser_user import Agent, Controller
+from browser_user.agent.views import ActionResult
+from browser_user.browser import BrowserSession
+from browser_user.llm import ChatOpenAI
 
 try:
 	from lmnr import Laminar

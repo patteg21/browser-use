@@ -11,9 +11,9 @@ from typing import cast
 
 from pydantic import BaseModel, Field
 
-from browser_use import ActionResult, Agent, Controller
-from browser_use.browser.types import ElementHandle, Page
-from browser_use.llm import ChatOpenAI
+from browser_user import ActionResult, Agent, Controller
+from browser_user.browser.types import ElementHandle, Page
+from browser_user.llm import ChatOpenAI
 
 
 class Position(BaseModel):

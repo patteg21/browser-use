@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from browser_use import ActionResult, Agent, Controller
-from browser_use.llm import ChatOpenAI
+from browser_user import ActionResult, Agent, Controller
+from browser_user.llm import ChatOpenAI
 
 controller = Controller()
 

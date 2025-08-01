@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from browser_use.config import (
+from browser_user.config import (
 	CONFIG,
 	FlatEnvConfig,
 	get_default_llm,

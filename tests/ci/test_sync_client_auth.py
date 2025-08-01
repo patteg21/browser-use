@@ -17,9 +17,9 @@ from pytest_httpserver import HTTPServer
 load_dotenv()
 
 
-from browser_use.agent.cloud_events import CreateAgentSessionEvent, CreateAgentTaskEvent
-from browser_use.sync.auth import TEMP_USER_ID, DeviceAuthClient
-from browser_use.sync.service import CloudSync
+from browser_user.agent.cloud_events import CreateAgentSessionEvent, CreateAgentTaskEvent
+from browser_user.sync.auth import TEMP_USER_ID, DeviceAuthClient
+from browser_user.sync.service import CloudSync
 
 # Define config dir for tests - not needed anymore since we'll use env vars
 
@@ -764,7 +764,7 @@ class TestAuthResilience:
 		).respond_with_json({'error': 'unauthorized', 'detail': 'Token expired'}, status=401)
 
 		# Create cloud sync service
-		from browser_use.sync.service import CloudSync
+		from browser_user.sync.service import CloudSync
 
 		service = CloudSync(base_url=httpserver.url_for(''), enable_auth=True)
 		service.auth_client = auth
@@ -802,7 +802,7 @@ class TestAuthResilience:
 		assert success is False
 
 		# Should still be able to create sync service
-		from browser_use.sync.service import CloudSync
+		from browser_user.sync.service import CloudSync
 
 		service = CloudSync(base_url=httpserver.url_for(''), enable_auth=True)
 		service.auth_client = auth
@@ -838,7 +838,7 @@ class TestAuthResilience:
 		result = await auth.poll_for_token('fake-device-code', interval=0.1, timeout=0.3)
 		assert result is None
 
-		from browser_use.sync.service import CloudSync
+		from browser_user.sync.service import CloudSync
 
 		service = CloudSync(base_url=httpserver.url_for(''), enable_auth=True)
 		service.auth_client = auth
@@ -863,7 +863,7 @@ class TestAuthResilience:
 		"""Test that excessive event queuing doesn't break the agent."""
 		auth = DeviceAuthClient(base_url=httpserver.url_for(''), http_client=http_client)
 
-		from browser_use.sync.service import CloudSync
+		from browser_user.sync.service import CloudSync
 
 		service = CloudSync(base_url=httpserver.url_for(''), enable_auth=True)
 		service.auth_client = auth
@@ -909,7 +909,7 @@ class TestAuthResilience:
 			method='POST',
 		).respond_with_data('malformed response', status=500)
 
-		from browser_use.sync.service import CloudSync
+		from browser_user.sync.service import CloudSync
 
 		service = CloudSync(base_url=httpserver.url_for(''), enable_auth=True)
 		service.auth_client = auth

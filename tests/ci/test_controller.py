@@ -6,11 +6,11 @@ import pytest
 from pydantic import BaseModel
 from pytest_httpserver import HTTPServer
 
-from browser_use.agent.views import ActionModel, ActionResult
-from browser_use.browser import BrowserSession
-from browser_use.browser.profile import BrowserProfile
-from browser_use.controller.service import Controller
-from browser_use.controller.views import (
+from browser_user.agent.views import ActionModel, ActionResult
+from browser_user.browser import BrowserSession
+from browser_user.browser.profile import BrowserProfile
+from browser_user.controller.service import Controller
+from browser_user.controller.views import (
 	ClickElementAction,
 	CloseTabAction,
 	DoneAction,
@@ -22,7 +22,7 @@ from browser_use.controller.views import (
 	SendKeysAction,
 	SwitchTabAction,
 )
-from browser_use.filesystem.file_system import FileSystem
+from browser_user.filesystem.file_system import FileSystem
 
 
 @pytest.fixture(scope='session')

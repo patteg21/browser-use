@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from browser_use.browser import BrowserProfile, BrowserSession
+from browser_user.browser import BrowserProfile, BrowserSession
 
 
 async def example_custom_window_size():

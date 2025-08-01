@@ -12,9 +12,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-from browser_use.agent.service import Agent
-from browser_use.browser import BrowserProfile, BrowserSession
-from browser_use.llm import ChatAzureOpenAI, ChatOpenAI
+from browser_user.agent.service import Agent
+from browser_user.browser import BrowserProfile, BrowserSession
+from browser_user.llm import ChatAzureOpenAI, ChatOpenAI
 
 # Set LLM based on defined environment variables
 if os.getenv('OPENAI_API_KEY'):

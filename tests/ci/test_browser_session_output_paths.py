@@ -8,8 +8,8 @@ from pathlib import Path
 
 import pytest
 
-from browser_use import Agent, AgentHistoryList
-from browser_use.browser import BrowserProfile, BrowserSession
+from browser_user import Agent, AgentHistoryList
+from browser_user.browser import BrowserProfile, BrowserSession
 from tests.ci.conftest import create_mock_llm
 
 

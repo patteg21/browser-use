@@ -13,8 +13,8 @@ load_dotenv()
 Laminar.initialize()
 
 
-from browser_use import Agent
-from browser_use.llm import ChatGroq
+from browser_user import Agent
+from browser_user.llm import ChatGroq
 
 groq_api_key = os.environ.get('GROQ_API_KEY')
 llm = ChatGroq(

@@ -14,7 +14,7 @@ import asyncio
 from langchain_openai import ChatOpenAI  # pyright: ignore
 from lmnr import Laminar
 
-from browser_use import Agent
+from browser_user import Agent
 from examples.models.langchain.chat import ChatLangchain
 
 Laminar.initialize()

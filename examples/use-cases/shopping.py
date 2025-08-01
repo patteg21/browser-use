@@ -8,9 +8,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from browser_use import Agent
-from browser_use.browser import BrowserSession
-from browser_use.llm import ChatOpenAI
+from browser_user import Agent
+from browser_user.browser import BrowserSession
+from browser_user.llm import ChatOpenAI
 
 task = """
    ### Prompt for Shopping Agent – Migros Online Grocery Order

@@ -19,10 +19,10 @@ socketserver.ThreadingMixIn.block_on_close = False
 # Also set daemon threads to prevent hanging
 socketserver.ThreadingMixIn.daemon_threads = True
 
-from browser_use.agent.views import AgentOutput
-from browser_use.controller.service import Controller
-from browser_use.llm import BaseChatModel
-from browser_use.llm.views import ChatInvokeCompletion
+from browser_user.agent.views import AgentOutput
+from browser_user.controller.service import Controller
+from browser_user.llm import BaseChatModel
+from browser_user.llm.views import ChatInvokeCompletion
 
 # Load environment variables before any imports
 load_dotenv()
@@ -33,9 +33,9 @@ os.environ['SKIP_LLM_API_KEY_VERIFICATION'] = 'true'
 
 from bubus import BaseEvent
 
-from browser_use import Agent
-from browser_use.browser import BrowserProfile, BrowserSession
-from browser_use.sync.service import CloudSync
+from browser_user import Agent
+from browser_user.browser import BrowserProfile, BrowserSession
+from browser_user.sync.service import CloudSync
 
 
 @pytest.fixture(autouse=True)

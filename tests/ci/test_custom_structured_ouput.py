@@ -3,9 +3,9 @@ import os
 
 import tiktoken
 
-from browser_use.agent.views import AgentOutput
-from browser_use.controller.service import Controller
-from browser_use.llm.schema import SchemaOptimizer
+from browser_user.agent.views import AgentOutput
+from browser_user.controller.service import Controller
+from browser_user.llm.schema import SchemaOptimizer
 
 
 def test_optimized_schema():

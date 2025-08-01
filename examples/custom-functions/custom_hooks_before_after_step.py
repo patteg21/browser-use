@@ -125,8 +125,8 @@ load_dotenv()
 import requests
 from pyobjtojson import obj_to_json  # type: ignore
 
-from browser_use import Agent
-from browser_use.llm import ChatOpenAI
+from browser_user import Agent
+from browser_user.llm import ChatOpenAI
 
 # import prettyprinter
 # prettyprinter.install_extras()

@@ -15,8 +15,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-from browser_use import Agent
-from browser_use.llm import ChatAzureOpenAI
+from browser_user import Agent
+from browser_user.llm import ChatAzureOpenAI
 
 # Retrieve Azure-specific environment variables
 azure_openai_api_key = os.getenv('AZURE_OPENAI_KEY')

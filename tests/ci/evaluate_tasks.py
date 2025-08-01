@@ -17,12 +17,12 @@ import aiofiles
 import yaml
 from pydantic import BaseModel
 
-from browser_use.agent.service import Agent
-from browser_use.agent.views import AgentHistoryList
-from browser_use.browser.profile import BrowserProfile
-from browser_use.browser.session import BrowserSession
-from browser_use.llm import ChatOpenAI
-from browser_use.llm.messages import UserMessage
+from browser_user.agent.service import Agent
+from browser_user.agent.views import AgentHistoryList
+from browser_user.browser.profile import BrowserProfile
+from browser_user.browser.session import BrowserSession
+from browser_user.llm import ChatOpenAI
+from browser_user.llm.messages import UserMessage
 
 # --- CONFIG ---
 MAX_PARALLEL = 10

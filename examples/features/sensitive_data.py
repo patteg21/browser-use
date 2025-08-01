@@ -8,9 +8,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from browser_use import Agent
-from browser_use.browser import BrowserProfile
-from browser_use.llm import ChatOpenAI
+from browser_user import Agent
+from browser_user.browser import BrowserProfile
+from browser_user.llm import ChatOpenAI
 
 try:
 	from lmnr import Laminar
@@ -45,7 +45,7 @@ sensitive_data: dict[str, str | dict[str, str]] = {
 task = 'Go to google.com and put the login information in the search bar.'
 
 # Always set allowed_domains when using sensitive_data for security
-from browser_use.browser.session import BrowserSession
+from browser_user.browser.session import BrowserSession
 
 browser_session = BrowserSession(
 	browser_profile=BrowserProfile(

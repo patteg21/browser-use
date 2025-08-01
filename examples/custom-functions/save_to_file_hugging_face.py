@@ -10,9 +10,9 @@ load_dotenv()
 
 from pydantic import BaseModel
 
-from browser_use.agent.service import Agent
-from browser_use.controller.service import Controller
-from browser_use.llm import ChatOpenAI
+from browser_user.agent.service import Agent
+from browser_user.controller.service import Controller
+from browser_user.llm import ChatOpenAI
 
 # Initialize controller first
 controller = Controller()
